@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+		<bean id="bar" class="test.Bar"/>
+		<bean id="bar2" class="test.Bar2"/>
+		<bean id="foo" class="test.Foo">
+			<lookup-method name="getBar" bean="bar"/>
+		</bean>
+		
+		
+		<bean id="calculator" class="service.CalculatorService_List"> 
+			<property name="valueList"> 
+				<list> 
+				<value type="java.lang.Integer">10</value> 
+				<value type="java.lang.Integer">20</value> 
+				</list> 
+			</property> 
+			
+			</bean>
+
+		<bean id="calculator2" class="service.CalculatorService_Map">
+			<property name="valueMap">
+				<map>
+					<entry>
+						<key><value>hey</value></key>
+						<ref bean="bar"/>
+					</entry>
+				</map>
+			</property>
+			<property name="valueMap2">
+				<map>
+					<entry>
+						<key><value>what's up</value></key>
+						<ref bean="bar2"/>
+					</entry>
+				</map>
+			</property>
+		</bean>	
+		<bean id="calculator3" class="service.CalculatorService_Properties">
+		
+		<property name="valueProperties"> 
+			<props> 
+				<prop key="server">192.168.1.100</prop> 
+				<prop key="timeout">5000</prop> 
+			</props> 
+		</property>
+		</bean>
+		
+		
+		<bean id="greeting" class="service.GreetingServiceImpl" scope="singleton"> 
+		<property name="greeting"> 
+			<value>Hello</value> 
+			</property> 
+			
+		</bean>
+		
+			<bean id="greeting2" class="service.GreetingServiceImpl" scope="prototype"> 
+			<property name="greeting2">
+			<value>Hey</value>
+			</property>	
+			</bean>
+		
+</beans>

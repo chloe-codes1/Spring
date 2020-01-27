@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>appServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+    
+    	  <!-- 내가 원하는 위치로 location 바꾸기 -->
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- main/java/com/mycompany/myapp/Sample servlet 파일 만들었더니 이렇게 자동 생성됨-->
+  <servlet>
+    <description>연습용</description>
+    <servlet-name>Sample</servlet-name>
+    <servlet-class>com.mycompany.myapp.Sample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample</servlet-name>
+    <url-pattern>/s.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>

@@ -1,0 +1,5 @@
+package com.mycompany.myapp.service;
+
+public class UpdateServiceImpl implements UpdateService{
+
+}

@@ -1,0 +1,21 @@
+package main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bit.jdbc.MyComponent;
+
+public class MyBatisTest {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("./config/myBatisAppContext.xml");
+//		ctx.getBean("dataSource");
+
+//		EmpMapper mapper 
+		
+		((MyComponent)ctx.getBean("myComponent")).selectEmpResult(7902);
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.mycompany.myapp.service;
+
+import java.sql.PreparedStatement;
+
+public interface UpdateService {
+
+	
+	
+}

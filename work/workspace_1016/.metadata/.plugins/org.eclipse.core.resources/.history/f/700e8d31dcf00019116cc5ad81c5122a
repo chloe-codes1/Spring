@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Verified</title>
+</head>
+<body>
+
+<div id="home">
+	<a href="main" id="home_link">HOME</a>
+
+</div>
+	<div id="main">
+		<p id="title">Now You can Update Your Personal Information, <span id="ename">${empInfo.eName}</span>!</p>
+		<div id="list">
+			<p id="subtitle">Personal Information</p>
+
+			<div id="list_data">
+				<div>Employee Number : ${empInfo.empNo}</div>
+				<div>Employee Name : ${empInfo.eName}</div>
+				<div>Job : ${empInfo.job}</div>
+				<div>MGR : ${empInfo.mgr}</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

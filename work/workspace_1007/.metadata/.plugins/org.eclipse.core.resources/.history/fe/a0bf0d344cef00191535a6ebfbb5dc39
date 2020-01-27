@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTDMapper3.0//EN" 
+           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bit.jdbc.dao.EmpMapper">
+
+	<select id="selectEmp" parameterType="int"
+		resultType="com.bit.jdbc.dto.Emp">
+		select empno, ename, job, mgr from emp where empno=#{en}
+
+	</select>
+
+
+</mapper>

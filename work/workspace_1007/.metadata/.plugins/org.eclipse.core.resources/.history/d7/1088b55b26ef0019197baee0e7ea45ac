@@ -1,0 +1,17 @@
+package com.bit.jdbc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.bit.jdbc.dao.EmpMapper;
+
+@Component
+public class MyComponent {
+	@Autowired
+	private EmpMapper empMapper;
+
+	public void selectEmpResult() {
+		
+		empMapper.selectEmp(empNo);
+	}
+}

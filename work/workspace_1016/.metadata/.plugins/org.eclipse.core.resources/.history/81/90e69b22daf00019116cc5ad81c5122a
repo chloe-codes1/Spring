@@ -1,0 +1,25 @@
+package com.mycompany.myapp.service;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.mycompany.myapp.beans.Emp;
+
+public class UpdateServiceImpl implements UpdateService{
+
+	
+	private PreparedStatement pStmt;
+	String sql;
+	
+	@Override
+	public Emp getEmpno(int empNo) {
+
+		sql = " select empno, ename, job, mgr from emp where empno = ?";
+
+		ResultSet rs = null;
+		Emp tempEmp = null;
+		
+		return null;
+	}
+
+}

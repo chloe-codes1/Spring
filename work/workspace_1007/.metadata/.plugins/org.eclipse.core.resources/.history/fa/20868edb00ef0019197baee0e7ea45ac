@@ -1,0 +1,18 @@
+package a;
+
+import java.util.List;
+
+
+
+public class SavingsDaoImpl2 implements SavingsDao{
+
+
+	@Override
+	public List<Savings> findSavingList() {
+		String sql ="select accountnumber, monthlydeposit, total, username from savings"; 
+		SavingsRowMapper rowMapper =new SavingsRowMapper(); 
+		List<Savings> savingsList = getJdbcTemplate.query(sql, rowMapper);
+		return savingsList;
+	}
+	
+}

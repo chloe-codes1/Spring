@@ -1,0 +1,11 @@
+package com.mycompany.myapp.service;
+
+import com.mycompany.myapp.beans.Emp;
+
+public interface UpdateService {
+
+	Emp getEmpno(int empNo);
+	
+	Emp int(int empNo, String eName, String job, int mgr);
+	
+}

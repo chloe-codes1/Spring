@@ -1,0 +1,10 @@
+package com.bit.jdbc.dao;
+
+import com.bit.jdbc.dto.Emp;
+
+public interface EmpMapper {
+
+	Emp selectEmp(@Param("empno")int empno);
+	
+	
+}

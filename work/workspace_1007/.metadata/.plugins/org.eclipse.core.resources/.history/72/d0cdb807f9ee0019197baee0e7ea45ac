@@ -1,0 +1,33 @@
+package a;
+
+public class Savings {
+	
+	String accountnumber;
+	String username;
+	int accountperiod;
+	int monthlyDeposit;
+	int interest;
+	double interestRate;
+	int totalInput;
+	int total;
+	
+	
+	public Savings() {
+	}
+
+
+	public Savings(String accountnumber, String username, int accountperiod, int monthlyDeposit, int interest,
+			double interestRate, int totalInput, int total) {
+		super();
+		this.accountnumber = accountnumber;
+		this.username = username;
+		this.accountperiod = accountperiod;
+		this.monthlyDeposit = monthlyDeposit;
+		this.interest = interest;
+		this.interestRate = interestRate;
+		this.totalInput = totalInput;
+		this.total = total;
+	}
+	
+	
+}

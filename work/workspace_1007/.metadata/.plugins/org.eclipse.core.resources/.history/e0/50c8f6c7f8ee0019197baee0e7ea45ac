@@ -1,0 +1,10 @@
+package a;
+
+public class Savings {
+
+	String accountnumber;
+	String username;
+	String accountperiod;
+	String monthlydeposit;
+	
+}

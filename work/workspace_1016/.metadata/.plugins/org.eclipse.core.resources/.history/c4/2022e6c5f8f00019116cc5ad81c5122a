@@ -1,0 +1,92 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update Result</title>
+
+<style type="text/css">
+#home {
+	width: 40px;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+#home_link {
+	text-decoration: none;
+	font-size: 18pt;
+}
+
+#main {
+	padding-top: 40px;
+}
+
+#ename {
+	color: #59AE6F;
+}
+
+#list {
+	width: 40%;
+	margin: 0 auto;
+	border: 1px solid gray;
+	margin-top: 50px;
+}
+
+#title {
+	text-align: center;
+	font-size: 20pt;
+}
+
+#subtitle {
+	text-align: center;
+	font-size: 16pt;
+}
+
+#list_data {
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 10px;
+}
+
+#entire_list{
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="home">
+		<a href="main" id="home_link">HOME</a>
+
+	</div>
+
+
+		<div id="main">
+			<p id="title">
+				Your Personal Information Has Been Updated, <span id="ename">${updatedInfo.eName}</span>.
+			</p>
+			<div id="list">
+				<p id="subtitle">Updated Personal Information</p>
+
+				<div id="list_data">
+					<div>Employee Number : ${updatedInfo.empNo}</div>
+					<div>Employee Name : ${updatedInfo.eName}</div>
+					<div>Job : ${updatedInfo.job}</div>
+					<div>MGR : ${updatedInfo.mgr}</div>
+					
+				</div>
+
+			</div>
+
+			<div id="entire_list">
+			<a href="empList" id="emplist" class="links"> Show Entire Employee List </a>
+		</div>
+</div>
+
+</body>
+</html>

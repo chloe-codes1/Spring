@@ -1,0 +1,14 @@
+package a;
+
+import java.util.List;
+
+public class SavingsDaoImpl2 {
+
+	public List<Savings> findUserList(){ 
+		String sql ="select accountnumber, monthlydeposit, total, username from savings"; 
+		SavingsRowMapper rowMapper =new SavingsRowMapper(); 
+		List<Savings> savingsList =jdbcTemplate.query(sql, rowMapper);
+		return savingsList;
+	}
+	
+}

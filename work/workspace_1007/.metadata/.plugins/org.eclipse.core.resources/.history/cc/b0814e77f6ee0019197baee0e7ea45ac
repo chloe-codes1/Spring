@@ -1,0 +1,17 @@
+package a;
+
+public class UserDaoImpl1 {
+
+	private JdbcTemplate jdbcTemplate;
+	public void set JdbcTemplate(JdbcTemplate jdbcTemplate){ 
+		this.jdbcTemplate =jdbcTemplate; 
+		} 
+	
+	public List<User> findUserList(){ 
+		String sql ="select accountnumber, monthlydeposit, total, username from savings"; 
+		UserRowMapper rowMapper =new UserRowMapper(); 
+		List<User> userList =jdbcTemplate.query(sql,rowMapper); 
+		returnuserList;
+	}
+	
+}

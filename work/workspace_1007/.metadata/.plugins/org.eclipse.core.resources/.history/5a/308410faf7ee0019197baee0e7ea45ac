@@ -1,0 +1,7 @@
+package a;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class SavingsRowMapper implements RowMapper<SavingsRowMapper>{
+
+}

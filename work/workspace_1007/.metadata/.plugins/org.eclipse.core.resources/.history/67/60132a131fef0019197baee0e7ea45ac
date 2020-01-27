@@ -1,0 +1,11 @@
+package com.bit.jdbc;
+
+public class Emp {
+
+	private int empno;
+	private String ename;
+	private String Job;
+	private int mgr;
+	
+	
+}

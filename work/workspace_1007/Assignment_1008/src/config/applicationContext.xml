@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	
+	<bean id="person" class="person.Person"/>
+	
+	<bean id="student" class="person.Student">
+		<constructor-arg ref="person"/>
+		<constructor-arg value="201410081"/>
+	</bean>
+	
+	<bean id="teacher" class="person.Teacher">
+		<constructor-arg ref="person"/>
+		<constructor-arg value="과학"/>
+	</bean>
+	
+		<bean id="employee" class="person.Employee">
+		<constructor-arg ref="person"/>
+		<constructor-arg value="행정팀"/>
+	</bean>
+		
+		<bean id="genie" class="person.Genie">
+		<constructor-arg ref="person"/>
+		<constructor-arg value="팔씨름"/>
+		
+		</bean>
+
+
+</beans>

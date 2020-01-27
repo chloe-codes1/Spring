@@ -1,0 +1,13 @@
+package a;
+
+public class Savings {
+
+	String accountnumber;
+	String username;
+	String accountperiod;
+	int monthlyDeposit;
+	double interestRate;
+	int interest;
+	int totalInput;
+	int total;
+}

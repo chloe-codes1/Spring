@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div id="home">
+		<a href="main" id="home_link">HOME</a>
+
+	</div>
+
+
+		<div id="main">
+			<p id="title">
+				Now You May Update Your Personal Information, <span id="ename">${empInfo.eName}</span>.
+			</p>
+			<div id="list">
+				<p id="subtitle">Personal Information</p>
+
+				<div id="list_data">
+					<div>Employee Number : ${empInfo.empNo}</div>
+					<div>Employee Name : 
+						<input type="text" id="eName" name="eName" placeholder="${empInfo.eName}"
+						 onblur="checkField(this)" onfocus="clearField(this)">
+					</div>
+					<div>Job : 
+						<input type="text" id="job" name="job" placeholder="${empInfo.job}"
+						onblur="checkField(this)" onfocus="clearField(this)">
+					</div>
+					<div>MGR : 
+						<input type="text" id="mgr" name="mgr" placeholder="${empInfo.mgr}"
+						onblur="checkField(this)" onfocus="clearField(this)">
+					</div>
+					
+					<input type="submit" value="Update"/>
+					<input type="reset" value="Cancel"/>
+				</div>
+
+			</div>
+
+		</div>
+
+
+</body>
+</html>

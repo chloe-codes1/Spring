@@ -1,0 +1,10 @@
+package a;
+
+public interface SavingsDao {
+
+	public void findSavingList() {
+		
+		
+	}
+	
+}

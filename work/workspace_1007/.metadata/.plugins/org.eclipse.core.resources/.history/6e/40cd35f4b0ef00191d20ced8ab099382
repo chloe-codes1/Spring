@@ -1,0 +1,20 @@
+package com.bit.jdbc.service;
+
+import com.bit.jdbc.dto.Emp;
+
+public class EmpServiceImpl implements EmpService{
+
+		
+		@Autowired
+		private EmpMapper empDao;
+		
+
+		
+		public Emp selectEmp(int empno) {
+			Emp emp =empDao.selectEmp(empno); 
+			return emp;
+		}
+
+	}
+
+}

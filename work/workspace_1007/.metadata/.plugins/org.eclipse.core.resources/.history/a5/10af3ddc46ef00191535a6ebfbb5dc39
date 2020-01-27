@@ -1,0 +1,15 @@
+package com.bit.jdbc;
+
+
+
+@Component
+public class MyComponent {
+	@Autowired
+	private EmpMapper empMapper;
+
+	public void selectEmpResult(int empNo) {
+		
+		Emp emp = empMapper.selectEmp(empNo);
+		System.out.println("사원명 : " + emp.geteName() + " mgr : " + emp.getMgr());
+	}
+}

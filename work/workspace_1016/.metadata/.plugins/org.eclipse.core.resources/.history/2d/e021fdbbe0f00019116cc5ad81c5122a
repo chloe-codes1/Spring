@@ -1,0 +1,90 @@
+package com.mycompany.myapp.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.mycompany.myapp.dao.DBConnection;
+import com.mycompany.myapp.service.EmpService;
+import com.mycompany.myapp.service.EmpServiceImpl;
+import com.mycompany.myapp.service.LoginService;
+import com.mycompany.myapp.service.LoginServiceImpl;
+import com.mycompany.myapp.service.UpdateService;
+import com.mycompany.myapp.service.UpdateServiceImpl;
+
+@Controller
+
+@RequestMapping("/emp")
+  // 얘를 넣으면 /emp를 거쳐서 들어가게 됨
+  // -> 이걸 사용함으로써 login 한 사람과 안한사람을 구분하여 보여주는 창을 달리 할 수 있음
+public class EmpProcController {
+
+	@RequestMapping("/main")
+	public String main() {
+		
+		
+		return "/main";
+	}
+	
+	
+	@RequestMapping("/login")
+	public void login() {
+		
+		/*
+		 * 사원번호 입력할 수 있는 jsp 호출하는 method
+		 */
+	}
+	
+	
+	@RequestMapping("/loginResult")
+	// 그냥 login하면 현제 있는 경로에서 찾고, /login 하면 webapp 밑에 있는 login을 찾음
+	public void loginResult(Model model,int empNo) {
+							//-> Model은 Map의 역할\
+		//                        @RequestParam("empNo")
+								 //-> @RequestParam은 jsp의 name과 일치시켜줘....
+		/*
+		 * 입력 받은 사원번호 이용해서 조회
+		 * 결과를 loginResult로 보내기
+		 */
+		
+		LoginService service = new LoginServiceImpl();
+		
+		model.addAttribute("empInfo", service.getEmpno(empNo));
+		
+	}
+	
+	@RequestMapping("empList")
+	public void empList(Model model) {
+		// emp를 넘겨 줘야하니까 Emp Table과 속성이 같은 class 필요  => emp class 만들어!
+		// SQL을 실행할 것이 필요  => DBConnection 호출
+		// emp 목록을 jsp에 전달한다
+		
+		DBConnection dao;
+		EmpService service = new EmpServiceImpl();
+		
+		model.addAttribute("emplist", service.getEmpList());
+		
+	}
+	
+	
+	@RequestMapping("/empUpdate")
+	public void empUpdate() {
+		
+	}
+	
+	@RequestMapping("/updateResult")
+	// 그냥 login하면 현제 있는 경로에서 찾고, /login 하면 webapp 밑에 있는 login을 찾음
+	public void updateResult(Model model,int empNo) {
+		
+		UpdateService service = new UpdateServiceImpl();
+		
+		model.addAttribute("empInfo", service.getEmpno(empNo));
+		
+	}
+	
+	
+	
+}
+
+

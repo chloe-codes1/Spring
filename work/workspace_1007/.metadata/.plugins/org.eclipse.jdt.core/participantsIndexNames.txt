@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\Users\juhyu\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4075363554.index
+\Test_20191007\src
+C:\Users\user\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1243477692.index
+\Test_Maven\src\main\java
+C:\Users\user\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4075363554.index
+\Test_20191007\src
+C:\Users\user\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1087813332.index
+\1_bank\src
+C:\Users\user\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\504665376.index
+\1_bank\src
+C:\Users\juhyu\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1243477692.index
+\Test_Maven\src\main\java
+C:\Users\user\Dropbox\bitcamp\Spring\work\workspace_1007\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3268558921.index
+\Test_1007\src

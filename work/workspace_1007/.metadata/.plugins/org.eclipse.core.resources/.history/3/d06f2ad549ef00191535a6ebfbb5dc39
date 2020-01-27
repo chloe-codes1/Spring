@@ -1,0 +1,12 @@
+package com.bit.jdbc.dao;
+
+
+import org.springframework.data.repository.query.Param;
+
+import com.bit.jdbc.dto.Emp;
+
+public interface EmpMapper {
+
+	Emp selectEmp(@Param("en")int empNo);
+	
+}

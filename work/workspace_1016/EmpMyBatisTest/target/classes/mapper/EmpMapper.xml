@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTDMapper3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bit.gangnam.dao.EmpMapper">
+	<select id="getEmpList" resultType="com.bit.gangnam.beans.Emp">
+		select empNo, eName, job, mgr from emp
+	</select>
+
+	<select id="getEmp" resultType="com.bit.gangnam.beans.Emp"
+		parameterType="map">
+		select empno, ename, job, mgr from emp where empno =
+		#{empNo} and
+		lower(ename) = lower(#{eName})
+	</select>
+
+
+	<select id="getEmpno" resultType="com.bit.gangnam.beans.Emp"
+		parameterType="int">
+		select empno, ename, job, mgr from emp where empno =
+		#{empNo}
+	</select>
+
+
+	<update id="updateEmp" parameterType="com.bit.gangnam.beans.Emp">
+		update emp set ename =
+		#{eName}, job = #{job}, mgr = #{mgr} where empno =
+		#{empNo}
+	</update>
+
+
+
+	<select id="getAllEmpCount" resultType="int">
+		select count(*) from emp
+	</select>
+	<select id="selectEmp" parameterType="int"
+		resultType="com.bit.gangnam.beans.Emp">
+		select empno, ename, job, mgr, hiredate, sal, comm
+		from emp where empno =#{empno}
+	</select>
+	<select id="getAllEmpno" resultType="int">
+		select empno from emp
+	</select>
+	<insert id="insertEmp" parameterType="Emp">
+		insert into emp (empno, ename, job, mgr, hiredate, sal, comm) values
+		(#{empno},#{ename},#{job},#{mgr},sysdate,#{sal},#{comm})
+	</insert>
+
+
+
+</mapper>

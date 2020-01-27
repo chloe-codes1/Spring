@@ -1,0 +1,21 @@
+package a;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class SavingDaoImpl1 {
+
+	private JdbcTemplate jdbcTemplate;
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate){ 
+		this.jdbcTemplate =jdbcTemplate; 
+		} 
+	
+	public List<Savings> findUserList(){ 
+		String sql ="select accountnumber, monthlydeposit, total, username from savings"; 
+		UserRowMapper rowMapper =new UserRowMapper(); 
+		List<User> userList =jdbcTemplate.query(sql,rowMapper); 
+		return userList;
+	}
+	
+}

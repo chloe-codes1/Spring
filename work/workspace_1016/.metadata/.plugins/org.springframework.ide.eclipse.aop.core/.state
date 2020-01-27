@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="EmpMyBatisTest_forBoot"/>
+<aop-project name="EmpMyBatisTest"/>
+<aop-project name="Sample"/>
+</aop-reference-model>

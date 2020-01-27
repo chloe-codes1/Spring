@@ -1,0 +1,18 @@
+package main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import a.SavingsDaoImpl1;
+import service.GreetingServiceImpl;
+
+public class SavingTest {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("./config/applicationContext.xml"); 
+		
+		GreetingServiceImpl bean1=(GreetingServiceImpl)ctx.getBean("greeting"); 
+	}
+
+}

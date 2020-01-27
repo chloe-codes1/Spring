@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+		
+		<bean id="greetingTarget" class="service.GreetingServiceImpl"> 
+			<property name="greeting"> 
+				<value>Hello</value> 
+			</property> 
+		</bean> 
+		
+		
+		<bean id="beforeLogAdvice" class="a.b.MethodBeforeLogAdvice"/> 
+		<bean id="afterLogAdvice" class="a.b.MethodAfterLogAdvice"/> 
+		<bean id="throwsLogAdvice" class="a.b.MethodThrowsLogAdvice"/> 
+		
+		<bean id="performanceCheckAdvice" class="a.b.PerformanceCheckAdvice"/> 
+		
+		<bean id="helloPointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+			<property name="pattern"> 
+				<value>.*say.*</value> 
+			</property>
+	</bean>
+		
+		<bean id="helloAdvisor1" class="org.springframework.aop.support.DefaultPointcutAdvisor"> 
+			<property name="advice"> 
+				<ref bean="beforeLogAdvice"/> 
+			</property> 
+			<property name="pointcut"> 
+				<ref bean="helloPointcut"/> 
+			</property> 
+		</bean>
+		
+			<bean id="helloAdvisor2" class="org.springframework.aop.support.DefaultPointcutAdvisor"> 
+			<property name="advice"> 
+				<ref bean="afterLogAdvice"/> 
+			</property> 
+			<property name="pointcut"> 
+				<ref bean="helloPointcut"/> 
+			</property> 
+		</bean>
+		
+			<bean id="helloAdvisor3" class="org.springframework.aop.support.DefaultPointcutAdvisor"> 
+			<property name="advice"> 
+				<ref bean="throwsLogAdvice"/> 
+			</property> 
+			
+			<property name="pointcut"> 
+				<ref bean="helloPointcut"/> 
+			</property> 
+		</bean>
+		
+		
+		<bean id="greeting" class="org.springframework.aop.framework.ProxyFactoryBean"> 
+			<property name="target"> 
+				<ref bean="greetingTarget"/> 
+			</property> 
+			<property name="interceptorNames"> 
+				<list> 
+					<value>helloAdvisor1</value> 
+					<value>helloAdvisor2</value> 
+					<value>helloAdvisor3</value> 
+				</list> 
+			</property> 
+			</bean>
+					
+			<bean id="logAspect" class="com.consolution.test.aop.pojo.LogAspect"/> 
+			<bean id="performanceAspect" class="com.consolution.test.aop.pojo.PerformanceAspect"/>
+			<aop:config> 
+				<aop:pointcut id="publicMethod" expression="execution(public**(..))"/> 
+				<aop:aspect ref="logAspect"> 
+					<aop:before method="beforeLogging" pointcut-ref="publicMethod"/> 
+					<aop:after-returning method="afterLogging" pointcut-ref="publicMethod" returning="returnValue"/> 
+					<aop:after-throwing method="throwingLogging" pointcut-ref="publicMethod" throwing="ex"/> 
+					<aop:after method="alwaysLogging" pointcut-ref="publicMethod"/> 
+				</aop:aspect> 
+				
+				<aop:aspect ref="performanceAspect"> 
+					<aop:around method="timeCheck" pointcut-ref="publicMethod"/> 
+				</aop:aspect> 
+			</aop:config>
+			
+			
+</beans>

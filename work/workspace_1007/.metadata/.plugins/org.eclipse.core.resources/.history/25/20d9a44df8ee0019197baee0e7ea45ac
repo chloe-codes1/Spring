@@ -1,0 +1,8 @@
+package a;
+
+import javax.swing.tree.RowMapper;
+
+public class SavingsRowMapper implements RowMapper{
+	public Object mapRow(ResultSet rs,int rowNum) throws SQLException{ Useruser =newUser(); user.setPassword(rs.getString("PASSWORD")); user.setName(rs.getString("NAME")); user.setEmail(rs.getString("EMAIL")); user.setUserId(rs.getString("USERID")); returnuser; 
+	
+}

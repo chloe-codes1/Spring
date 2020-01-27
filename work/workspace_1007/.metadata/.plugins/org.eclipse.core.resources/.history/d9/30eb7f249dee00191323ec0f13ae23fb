@@ -1,0 +1,28 @@
+package service;
+
+public class GreetingServiceImpl {
+	
+	private String greeting;
+	public String greeting2;
+	
+	
+	
+	
+	public GreetingServiceImpl() {
+		super();
+	}
+
+	public void setGreeting(String greeting) {
+		this.greeting = greeting;
+	}
+
+	public void setGreeting2(String greeting2) {
+		this.greeting2 = greeting2;
+	}
+
+	@Override
+	public String toString() {
+		return "GreetingServiceImpl [greeting=" + greeting + ", greeting2=" + greeting2 + "]";
+	}
+	
+}

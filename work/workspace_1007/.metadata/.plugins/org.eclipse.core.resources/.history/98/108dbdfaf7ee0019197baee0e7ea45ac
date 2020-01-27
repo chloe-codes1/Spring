@@ -1,0 +1,16 @@
+package a;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class SavingsRowMapper implements RowMapper<SavingsRowMapper>{
+
+	@Override
+	public SavingsRowMapper mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

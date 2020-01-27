@@ -1,0 +1,12 @@
+package com.bit.jdbc.dao;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.bit.jdbc.dto.Emp;
+
+public interface EmpMapper {
+
+	Emp selectEmp(@Param("empno")int empno);
+	
+	
+}

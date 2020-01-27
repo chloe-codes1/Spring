@@ -1,0 +1,19 @@
+package com.bit.jdbc;
+
+public class Emp {
+
+	private int empNo;
+	private String eName;
+	private String job;
+	private int mgr;
+	public Emp(int empNo, String eName, String job, int mgr) {
+		super();
+		this.empNo = empNo;
+		this.eName = eName;
+		this.job = job;
+		this.mgr = mgr;
+	}
+	
+	
+	
+}

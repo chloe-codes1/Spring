@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+ <modelVersion>4.0.0</modelVersion>
+	 <groupId>com.bit</groupId>
+	  <artifactId>myApp</artifactId>
+	<name>Test_1014_Maven</name>
+	 <packaging>war</packaging>
+	 <version>1.0.0-BUILD-SNAPSHOT</version>
+	 
+<properties>
+    <java-version>1.8</java-version>
+    <org.springframework-version>4.3.14.RELEASE</org.springframework-version>
+      <org.aspectj-version>1.6.10</org.aspectj-version>
+    <org.slf4j-version>1.6.6</org.slf4j-version>
+  </properties>
+	 
+	 <dependencies>
+	 
+	 
+	 
+	 </dependencies>
+	 
+</project>

@@ -1,0 +1,9 @@
+package com.bit.jdbc;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyComponent {
+
+	
+}

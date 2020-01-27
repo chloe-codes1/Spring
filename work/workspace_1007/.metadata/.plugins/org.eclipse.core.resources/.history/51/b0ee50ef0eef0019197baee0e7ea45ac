@@ -1,0 +1,33 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import a.Savings;
+import a.SavingsDaoImpl1;
+
+public class SavingTest {
+
+	public static void main(String[] args) {
+
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("./config/applicationContext.xml"); 
+		
+		SavingsDaoImpl1 bean1=(SavingsDaoImpl1)ctx.getBean("savingsDao"); 
+		
+		List<Savings> list = new ArrayList<Savings>(); 
+		list.add((Savings) bean1.findSavingList());
+		
+		Iterator<Savings> iter = list.iterator();
+		while(iter.hasNext()) {
+			
+			System.out.println(iter.next());
+		}
+		
+		
+	}
+
+}

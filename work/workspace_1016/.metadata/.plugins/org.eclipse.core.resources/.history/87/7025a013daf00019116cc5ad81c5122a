@@ -1,0 +1,18 @@
+package com.mycompany.myapp.service;
+
+import java.sql.PreparedStatement;
+
+import com.mycompany.myapp.beans.Emp;
+
+public class UpdateServiceImpl implements UpdateService{
+
+	
+	private PreparedStatement pStmt;
+	String sql;
+	
+	@Override
+	public Emp getEmpno(int empNo) {
+		return null;
+	}
+
+}

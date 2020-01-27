@@ -1,0 +1,8 @@
+package main;
+
+public class SubObject {
+
+    public void finalize() {
+        System.out.println( "Running finalize()");
+      }
+}

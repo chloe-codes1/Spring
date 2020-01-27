@@ -1,0 +1,12 @@
+package com.bit.jdbc.service;
+
+import com.bit.jdbc.dto.Emp;
+
+public class EmpServiceImpl implements EmpService{
+
+	@Override
+	public Emp selectEmp(int empno) {
+		return null;
+	}
+
+}

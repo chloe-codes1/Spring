@@ -1,0 +1,13 @@
+package com.mycompany.myapp.service;
+
+import com.mycompany.myapp.beans.Emp;
+
+public class UpdateServiceImpl implements UpdateService{
+
+	@Override
+	public Emp getEmpno(int empNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

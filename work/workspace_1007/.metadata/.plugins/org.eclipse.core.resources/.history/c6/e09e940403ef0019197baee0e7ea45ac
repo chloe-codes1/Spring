@@ -1,0 +1,13 @@
+package main;
+
+import a.SavingsDaoImpl1;
+
+public class SavingTest {
+
+	public static void main(String[] args) {
+
+		SavingsDaoImpl1 dao = new SavingsDaoImpl1();
+		
+	}
+
+}
